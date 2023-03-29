@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> crazy-science-2420</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+                Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+                sans-serif;
+        }
+
+        /* <--Header css start --> */
+        #header {
+            margin: 0px;
+            position: fixed;
+            top: 0px;
+            width: 100%;
+            border-bottom: 1px solid grey;
+            background-color: #fff;
+
+        }
+
+        #navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-direction: row;
+            width: 96%;
+            margin: auto;
+            font-size: 17px;
+        }
+
+        #navbar>div:nth-child(1) {
+            display: flex;
+            gap: 15px;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        #navbar>div:nth-child(2) {
+            display: flex;
+            width: 30%;
+            margin: auto;
+            justify-content: space-evenly;
+            gap: 15px;
+        }
+
+        #navbar a {
+            display: inline-flex;
+            margin: 5px;
+            text-decoration: none;
+            color: #e3204a;
+        }
+
+        #navbar button {
+            font-size: 17px;
+            border-radius: 24px;
+            padding: 11px;
+            border: none;
+            width: 150px;
+            background-color: #e3204a;
+            color: white;
+        }
+
+        /* <--Header css end --> */
+        #container {
+            display: flex;
+            width: 90%;
+            margin: auto;
+        }
+
+        #conatainer>div {
+            height: 50px;
+            background-color: red;
+        }
+
+        .heading {
+            margin-top: 85px;
+            text-align: center;
+        }
+
+        .select {
+            margin-top: 10px;
+            text-align: center;
+
+        }
+
+        .select>div {
+
+
+            display: grid;
+            width: 80%;
+            margin: auto;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 20px;
+            align-items: center;
+            padding: 30px;
+        }
+
+        .select>div div:hover {
+            border: 2px solid rgb(0, 0, 92);
+            cursor: context-menu;
+        }
+
+        .select>div img {
+            width: 100%;
+            border-radius: 50px;
+        }
+
+        .select>div div {
+            background-color:
+                rgb(224, 245, 222);
+            padding: 20px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <div id="navbar">
+            <div>
+                <a href="./index.html">
+                    <img src="https://d2wl1kt18tqdum.cloudfront.net/v2.1.2549-stageb/Assets/Theming/css/img/icon_circle-cfa-logo.svg"
+                        alt="log" />
+                </a>
+
+
+                <a href="">
+                    <img src="https://www.chick-fil-a.com/-/media/images/cfa/feature/page-content/defaultimages/pwo/pwo-modals/use-my-location-icon.ashx?la=en&hash=2441EF1B39331BBB17269D2B7EA274FB"
+                        alt="location" />
+                    <p>Find a restaurant</p>
+                </a>
+
+            </div>
+            <div>
+                <a href="./menu.html">Menu</a>
+
+                <a href="https://www.chick-fil-a.com/stories" target="_blank">Stories</a>
+
+                <a href="https://www.chick-fil-a.com/about/who-we-are" target="_blank">About</a>
+
+                <a href="./careers.html">Careers</a>
+            </div>
+            <div>
+                <!-- <a href=""> Chick-fil-A One</a>
+                <a href=""> ( Sign In )</a> -->
+
+                <button>Order Food</button>
+            </div>
+        </div>
+    </div>
+    <div class="heading">
+        <h1>
+            Chick-fil-A® Menu
+        </h1>
+        <p>Availability may differ at different locations.</p>
+    </div>
+    <div class="select">
+        <h1>
+            ⬇️Inspiration category for your first order⬇️
+        </h1>
+        <div>
+            <div class="pizza">
+                <img src="https://b.zmtcdn.com/data/o2_assets/d0bd7c9405ac87f6aa65e31fe55800941632716575.png" alt="">
+                <h2>Pizza</h2>
+            </div>
+            <div class="burger">
+                <img src="https://b.zmtcdn.com/data/dish_images/ccb7dc2ba2b054419f805da7f05704471634886169.png" alt="">
+                <h2>Burger</h2>
+            </div>
+            <div class="thali">
+                <img src="https://b.zmtcdn.com/data/o2_assets/52eb9796bb9bcf0eba64c643349e97211634401116.png" alt="">
+                <h2>Thali</h2>
+            </div>
+            <div class="paneer">
+                <img src="https://b.zmtcdn.com/data/dish_images/e44c42ff4b60b025225c8691ef9735b11635781903.png" alt="">
+                <h2>Paneer</h2>
+            </div>
+            <div class="dosa">
+                <img src="https://b.zmtcdn.com/data/o2_assets/8dc39742916ddc369ebeb91928391b931632716660.png" alt="">
+                <h2>Dosa</h2>
+            </div>
+            <div class="rolls">
+                <img src="https://b.zmtcdn.com/data/dish_images/c2f22c42f7ba90d81440a88449f4e5891634806087.png" alt="">
+                <h2>Rolls</h2>
+            </div>
+
+
+        </div>
+    </div>
+    <div id="display">
+
+    </div>
+</body>
+
+</html>
