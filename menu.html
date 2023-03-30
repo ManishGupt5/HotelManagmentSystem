@@ -85,39 +85,19 @@
             text-align: center;
         }
 
-        .select {
-            margin-top: 10px;
-            text-align: center;
-
-        }
-
-        .select>div {
-
-
+        #display {
             display: grid;
-            width: 80%;
+            width: 90%;
             margin: auto;
-            grid-template-columns: repeat(6, 1fr);
-            gap: 20px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
             align-items: center;
             padding: 30px;
+            text-align: center;
         }
 
-        .select>div div:hover {
-            border: 2px solid rgb(0, 0, 92);
-            cursor: context-menu;
-        }
-
-        .select>div img {
+        #display img {
             width: 100%;
-            border-radius: 50px;
-        }
-
-        .select>div div {
-            background-color:
-                rgb(224, 245, 222);
-            padding: 20px;
-            border-radius: 20px;
         }
     </style>
 </head>
@@ -149,9 +129,6 @@
                 <a href="./careers.html">Careers</a>
             </div>
             <div>
-                <!-- <a href=""> Chick-fil-A One</a>
-                <a href=""> ( Sign In )</a> -->
-
                 <button>Order Food</button>
             </div>
         </div>
@@ -162,42 +139,113 @@
         </h1>
         <p>Availability may differ at different locations.</p>
     </div>
-    <div class="select">
-        <h1>
-            ⬇️Inspiration category for your first order⬇️
-        </h1>
+
+
+
+    <div id="display">
         <div>
-            <div class="pizza">
-                <img src="https://b.zmtcdn.com/data/o2_assets/d0bd7c9405ac87f6aa65e31fe55800941632716575.png" alt="">
-                <h2>Pizza</h2>
-            </div>
-            <div class="burger">
-                <img src="https://b.zmtcdn.com/data/dish_images/ccb7dc2ba2b054419f805da7f05704471634886169.png" alt="">
-                <h2>Burger</h2>
-            </div>
-            <div class="thali">
-                <img src="https://b.zmtcdn.com/data/o2_assets/52eb9796bb9bcf0eba64c643349e97211634401116.png" alt="">
-                <h2>Thali</h2>
-            </div>
-            <div class="paneer">
-                <img src="https://b.zmtcdn.com/data/dish_images/e44c42ff4b60b025225c8691ef9735b11635781903.png" alt="">
-                <h2>Paneer</h2>
-            </div>
-            <div class="dosa">
-                <img src="https://b.zmtcdn.com/data/o2_assets/8dc39742916ddc369ebeb91928391b931632716660.png" alt="">
-                <h2>Dosa</h2>
-            </div>
-            <div class="rolls">
-                <img src="https://b.zmtcdn.com/data/dish_images/c2f22c42f7ba90d81440a88449f4e5891634806087.png" alt="">
-                <h2>Rolls</h2>
-            </div>
+            <img src="https://www.cfacdn.com/img/order/menu/Online/Entrees/Jul19_CFASandwich_pdp.png" alt="">
+            <h2>Chick-fil-A® Chicken Sandwich</h2>
+            <p>440 Cal per Sandwich</p>
+            <button>Order now</button>
+        </div>
+        <div>
+            <img src="https://www.cfacdn.com/img/order/COM/Menu_Refresh/Entree/Entree%20PDP/_0000s_0004_NEWStack6200001CFAPDPDeluxeSandwich1085png.png"
+                alt="">
+            <h2>Chick-fil-A® Deluxe Sandwich</h2>
+            <p>500 Cal per Sandwich</p>
+            <button>Order now</button>
+        </div>
+        <div>
+            <img src="https://www.cfacdn.com/img/order/menu/Online/Entrees/CFASpicySandwich_1080.png" alt="">
+            <h2>Spicy Chicken Sandwich </h2>
+            <p> 460 Cal per Sandwich</p>
+            <button>Order now</button>
+        </div>
+        <div>
+            <img src="https://www.cfacdn.com/img/order/menu/Online/Entrees/Dec2019_CFANuggets_5ct_pdp.png" alt="">
+            <h2>5 Ct Nuggets Kid's Meal</h2>
+            <p>160 Cal per Entree</p>
+            <button>Order now</button>
+        </div>
+        <div>
+            <img src="https://www.cfacdn.com/img/order/menu/Online/Entrees/strips_2ct_PDP.png" alt="">
+            <h2>2 Ct Chick-n-Strips® Kid's Meal</h2>
+            <p> 200 Cal per entrée</p>
+            <button>Order now</button>
+        </div>
+        <div>
+            <img src="https://www.cfacdn.com/img/order/menu/Online/Entrees/Dec2019_GrilledNuggets_5ct_pdp.png" alt="">
+            <h2> 5 Ct Grilled Nuggets Kid's Meal</h2>
+            <p>80 Cal per Entree</p>
+            <button>Order now</button>
+        </div>
+        <div>
+            <img src="https://www.cfacdn.com/img/order/COM/Menu_Refresh/Drinks/Drinks%20PDP/_0000s_0022_Feed_Menu_0000_Drinks_Coca-cola.png"
+                alt="">
+            <h2>Coca-Cola®</h2>
+            <p>140 Cal per Container</p>
+            <button>Order now</button>
+        </div>
+        <div>
+            <img src="https://www.cfacdn.com/img/order/menu/Mobile/Beverages/Parent/DrPepper_PaperCup_straight_wet_1200x1200.png"
+                alt="">
+            <h2>Dr Pepper®</h2>
+            <p>180 Cal per Container</p>
+            <button>Order now</button>
+        </div>
+        <div>
+            <img src="https://www.cfacdn.com/img/order/COM/Menu_Refresh/Drinks/Drinks%20PDP/_0000s_0026_%5BFeed%5D_0006s_0014_Drinks_Dasani-Water.png"
+                alt="">
+            <h2>DASANI® Bottled Water</h2>
+            <p>0 Cal per Bottle</p>
+            <button>Order now</button>
+        </div>
+        <div>
+            <img src="https://www.cfacdn.com/img/order/menu/Online/Entrees/spicyChilledGrilled_PDP.png" alt="">
+            <h2>Spicy Chilled Grilled Chicken Sub Sandwich</h2>
+            <p>430 Cal per sandwich</p>
+            <button>Order now</button>
+        </div>
+        <div>
+            <img src="https://www.cfacdn.com/img/order/menu/Online/Sides%26treats/kaleCrunch_sm_pdp.png" alt="">
+            <h2>Kale Crunch Side</h2>
+            <p>120 Cal per Serving</p>
+            <button>Order now</button>
+        </div>
+        <div>
+            <img src="https://www.cfacdn.com/img/order/menu/Online/Sides%26treats/Jul19_OrganicAussieGreekYogurtParfaitCupGranola_pdp.png"
+                alt="">
+            <h2> Greek Yogurt Parfait</h2>
+            <p>270 Cal per serving</p>
+            <button>Order now</button>
+        </div>
+        <div>
+            <img src="https://www.cfacdn.com/img/order/menu/Online/Sides%26treats/PDP_CCCookie.png" alt="">
+            <h2>Chocolate Chunk Cookie</h2>
+            <p>370 Cal per cookie</p>
+            <button>Order now</button>
+        </div>
+        <div>
+            <img src="https://www.cfacdn.com/img/order/menu/Mobile/Desserts/Menu%20Item/16oz_C%26C_Milkshake-1080.png"
+                alt="">
+            <h2>Chocolate Milkshake</h2>
 
-
+            <p>590 Cal per Milkshake</p>
+            <button>Order now</button>
+        </div>
+        <div>
+            <img src="https://www.cfacdn.com/img/order/menu/Online/Sides%26treats/IceDream_RedCup_1080x1080.png" alt="">
+            <h2>Chick-fil-A® Icedream® Cup</h2>
+            <p>140 Cal per cup</p>
+            <button>Order now</button>
         </div>
     </div>
-    <div id="display">
-
-    </div>
 </body>
+<!-- <script>
+    function display(data) {
+
+    }
+</script> -->
 
 </html>
