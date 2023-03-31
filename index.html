@@ -5,7 +5,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <link rel="shortcut icon"
+        href="https://d2wl1kt18tqdum.cloudfront.net/v2.1.2549-stageb/Assets/Theming/css/img/icon_circle-cfa-logo.svg"
+        type="image/x-icon">
     <meta name="description" content="this website made for learning perpose not for misguide pepople" />
     <title>crazy-science-2420</title>
     <style>
@@ -37,14 +39,20 @@
             font-size: 17px;
         }
 
-        #navbar>div:nth-child(1) {
+        .logo {
             display: flex;
-            gap: 15px;
+            align-items: center;
+        }
+
+        .logo a {
+            display: flex;
+            gap: 10px;
+            justify-content: space-between;
             flex-direction: row;
             align-items: center;
         }
 
-        #navbar>div:nth-child(2) {
+        .menu {
             display: flex;
             width: 30%;
             margin: auto;
@@ -105,13 +113,13 @@
             margin-bottom: 15px;
         }
 
-        .container-btn {
+        #container-btn {
             display: flex;
             flex-direction: row;
             gap: 10px;
         }
 
-        .container-btn button {
+        #container-btn button {
             width: 200px;
             border: 1px solid #dd0031;
             height: 50px;
@@ -120,53 +128,99 @@
             border-radius: 5px;
         }
 
-        .container-btn img {
+        #container-btn img {
             width: 24px;
             height: 24px;
         }
 
         #container img {
-            width: 90%;
+            width: 100%;
         }
 
-        .container2 {
+        #container2 {
             display: flex;
             flex-direction: row;
             width: 90%;
             margin: auto;
+            background-color: #f4f8f9;
+            border-radius: 10px;
+            margin-bottom: 10px;
         }
 
-        .container2 a {
+        #container2 a {
             text-decoration: none;
             padding: 5px;
             background-color: #dd0031;
             color: white;
             border: 1px solid #dd0031;
             border-radius: 10px;
+            align-items: center;
         }
 
-        .container2 div {
+        #container2 div {
             width: 50%;
             display: flex;
-            background-color: #f4f8f9;
             text-align: center;
             align-items: center;
             border-radius: 10px;
         }
 
-        .container2>div {
+        #container2>div {
             flex-direction: column;
             padding: 40px;
         }
 
-        .container2 img {
+        #container2 img {
             width: 100%;
             height: 300px;
             border-radius: 10px;
         }
 
-        .footer img {
-            width: 100%;
+        @media only screen and (max-width: 700px) {
+            #navbar {
+                flex-direction: column;
+                width: 100%;
+                justify-content: center;
+                margin-bottom: 10px;
+            }
+
+            #navbar button {
+                display: none;
+            }
+
+            #container {
+                width: 100%;
+                flex-direction: column;
+                margin-top: 62px;
+                text-align: center;
+                align-items: center;
+            }
+
+            #container>div:nth-child(2) {
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            #container-btn {
+                justify-content: center;
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            #container-btn button {
+                width: 150px;
+            }
+
+            #container2 {
+                margin-top: 15px;
+                width: 100%;
+                flex-direction: column;
+            }
+
+            #container2 div {
+                box-sizing: border-box;
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -174,33 +228,24 @@
 <body>
     <div id="header">
         <div id="navbar">
-            <div>
-                <a href="./index.html">
-                    <img src="https://d2wl1kt18tqdum.cloudfront.net/v2.1.2549-stageb/Assets/Theming/css/img/icon_circle-cfa-logo.svg"
+            <div class="logo">
+                <a href="./index.html"><img
+                        src="https://d2wl1kt18tqdum.cloudfront.net/v2.1.2549-stageb/Assets/Theming/css/img/icon_circle-cfa-logo.svg"
                         alt="log" />
                 </a>
-
                 <a href="">
                     <img src="https://www.chick-fil-a.com/-/media/images/cfa/feature/page-content/defaultimages/pwo/pwo-modals/use-my-location-icon.ashx?la=en&hash=2441EF1B39331BBB17269D2B7EA274FB"
                         alt="location" />
                     <p>Find a restaurant</p>
                 </a>
             </div>
-            <div>
+            <div class="menu">
                 <a href="menu.html">Menu</a>
-
                 <a href="https://www.chick-fil-a.com/stories" target="_blank">Stories</a>
-
                 <a href="https://www.chick-fil-a.com/about/who-we-are" target="_blank">About</a>
-
                 <a href="careers.html">Careers</a>
             </div>
             <div>
-                <!-- <a href="https://www.chick-fil-a.com/one?_gl=1*1yta3q7*_ga*MTUzNTU3MjI5MS4xNjc5NzQxMjEy*_ga_W1ZL54JC7M*MTY4MDA2NTc0MS4xMy4xLjE2ODAwNjg2NzkuNTUuMC4w"
-                    target="_blank">
-                    Chick-fil-A One</a>
-                <a href=""> ( Sign In )</a> -->
-
                 <button>Order now</button>
             </div>
         </div>
@@ -210,34 +255,26 @@
             <img src="https://d1fd34dzzl09j.cloudfront.net/Images/CFACOM/Daypart%20Hero/Winter23/Winter23-DotCom-ChickenSandwich-D_720x748.jpg?h=748&w=720&la=en"
                 alt="" />
         </div>
+
         <div>
             <h2>
                 <img src="https://d1fd34dzzl09j.cloudfront.net/Images/CFACOM/Daypart%20Hero/Nametags.svg?h=25&w=29&la=en"
-                    alt="" />
-                Welcome
+                    alt="" />Welcome
             </h2>
-
-            <h1>An original then,<br />an original now</h1>
-            <div class="container-btn">
-                <a href="">
-                    <button>
+            <h1>An original then, <br />an original now</h1>
+            <div id="container-btn">
+                <a href=""><button>
                         <img src="https://d1fd34dzzl09j.cloudfront.net/Images/CFACOM/Daypart%20Hero/carryout-icon.svg?h=24&w=24&la=en"
-                            alt="" />
-                        Order Pickup
-                    </button>
-                </a>
-
-                <a href="">
-                    <button>
+                            alt="" />Order Pickup
+                    </button></a><a href=""><button>
                         <img src="https://d1fd34dzzl09j.cloudfront.net/Images/CFACOM/Daypart%20Hero/delivery-car-icon.svg?h=22&w=34&la=en"
-                            alt="" />
-                        Order Delivery
-                    </button>
-                </a>
+                            alt="" />Order Delivery
+                    </button></a>
             </div>
         </div>
     </div>
-    <div class="container2">
+
+    <div id="container2">
         <div>
             <h1>Hungry for more?</h1>
             <p>
@@ -252,11 +289,6 @@
                 alt="" />
         </div>
     </div>
-    <div class="footer">
-        <img src="https://d1fd34dzzl09j.cloudfront.net/Images/CFACOM/Footer%20Images/footer-burger-phone-desktop-new-3.jpg"
-            alt="" />
-    </div>
 </body>
 
 </html>
-~
