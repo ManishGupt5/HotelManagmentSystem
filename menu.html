@@ -104,8 +104,26 @@
             text-align: center;
         }
 
+        #display button {
+            border: 1px solid #e3204a;
+            background-color: #e3204a;
+            color: white;
+            padding: 6px;
+            border-radius: 8px;
+            font-size: 18px;
+        }
+
         #display img {
             width: 100%;
+        }
+
+        #filter {
+            padding: 6px;
+            border-radius: 3px;
+        }
+
+        button:hover {
+            opacity: 0.7;
         }
 
         @media only screen and (max-width: 700px) {
@@ -150,9 +168,9 @@
             </div>
             <div class="menu">
                 <a href="menu.html">Menu</a>
-                <a href="https://www.chick-fil-a.com/stories" target="_blank">Stories</a>
-                <a href="https://www.chick-fil-a.com/about/who-we-are" target="_blank">About</a>
-                <a href="careers.html">Careers</a>
+                <a href="./myOrder.html">Order</a>
+                <a href="">About</a>
+                <a href="./login.html">Login</a>
             </div>
             <div>
                 <button>Order now</button>
@@ -162,7 +180,7 @@
     <div class="heading">
         <h1>Chick-fil-A® Menu</h1>
         <p>Availability may differ at different locations.</p>
-        <b>Filter menu</b>
+        <strong>Filter menu</strong>
         <select name="manish" id="filter">
             <option value="">Select From Menu List</option>
             <option value="breakfast">Breakfast</option>
@@ -177,170 +195,191 @@
         </select>
     </div>
 
-    <div id="display">
-        <div>
-            <img src="https://www.cfacdn.com/img/order/COM/Menu_Refresh/Sides/Sides%20PDP/_0000s_0010_%5BFeed%5D_0003s_0002_Sides_Fruit-Cup.png"
-                alt="" />
-            <h2>Fruit Cup</h2>
-            <p>60 Cal per Serving</p>
-            <button>Order now</button>
-        </div>
-        <div>
-            <img src="https://www.cfacdn.com/img/order/menu/Online/Sides%26treats/Jul19_OrganicAussieGreekYogurtParfaitCupGranola_pdp.png"
-                alt="" />
-            <h2>Greek Yogurt Parfait</h2>
-            <p>270 Cal per serving</p>
-            <button>Order now</button>
-        </div>
-
-        <div>
-            <img src="https://www.cfacdn.com/img/order/menu/Online/Breakfast/EMuffin_PDP.png" alt="" />
-
-            <h2>English Muffin</h2>
-            <p>140 Cal per muffin</p>
-            <button>Order now</button>
-        </div>
-
-        <div>
-            <img src="https://www.cfacdn.com/img/order/menu/Online/Breakfast/CECMuffin_1080px.png" alt="" />
-            <h2>Chicken, Egg & Cheese Muffin</h2>
-            <p>420 Cal per Sandwich</p>
-            <button>Order now</button>
-        </div>
-
-        <div>
-            <img src="https://www.cfacdn.com/img/order/menu/Online/Entrees/Jul19_CFASandwich_pdp.png" alt="" />
-            <h2>Chick-fil-A® Chicken Sandwich</h2>
-            <p>440 Cal per Sandwich</p>
-            <button>Order now</button>
-        </div>
-        <div>
-            <img src="https://www.cfacdn.com/img/order/COM/Menu_Refresh/Entree/Entree%20PDP/_0000s_0004_NEWStack6200001CFAPDPDeluxeSandwich1085png.png"
-                alt="" />
-            <h2>Chick-fil-A® Deluxe Sandwich</h2>
-            <p>500 Cal per Sandwich</p>
-            <button>Order now</button>
-        </div>
-        <div>
-            <img src="https://www.cfacdn.com/img/order/menu/Online/Entrees/spicyChilledGrilled_PDP.png" alt="" />
-            <h2>Spicy Chilled Grilled Chicken Sub Sandwich</h2>
-            <p>430 Cal per sandwich</p>
-            <button>Order now</button>
-        </div>
-        <div>
-            <img src="https://www.cfacdn.com/img/order/menu/Online/Entrees/CFASpicySandwich_1080.png" alt="" />
-            <h2>Spicy Chicken Sandwich</h2>
-            <p>460 Cal per Sandwich</p>
-            <button>Order now</button>
-        </div>
-
-        <div>
-            <img src="https://www.cfacdn.com/img/order/menu/Online/Entrees/Dec2019_CFANuggets_5ct_pdp.png" alt="" />
-            <h2>5 Ct Nuggets Kid's Meal</h2>
-            <p>160 Cal per Entree</p>
-            <button>Order now</button>
-        </div>
-        <div>
-            <img src="https://www.cfacdn.com/img/order/menu/Online/Entrees/strips_2ct_PDP.png" alt="" />
-            <h2>2 Ct Chick-n-Strips® Kid's Meal</h2>
-            <p>200 Cal per entrée</p>
-            <button>Order now</button>
-        </div>
-        <div>
-            <img src="https://www.cfacdn.com/img/order/menu/Online/Entrees/Dec2019_GrilledNuggets_5ct_pdp.png" alt="" />
-            <h2>5 Ct Grilled Nuggets Kid's Meal</h2>
-            <p>80 Cal per Entree</p>
-            <button>Order now</button>
-        </div>
-
-        <div>
-            <img src="https://www.cfacdn.com/img/order/COM/Menu_Refresh/Drinks/Drinks%20PDP/_0000s_0022_Feed_Menu_0000_Drinks_Coca-cola.png"
-                alt="" />
-            <h2>Coca-Cola®</h2>
-            <p>140 Cal per Container</p>
-            <button>Order now</button>
-        </div>
-        <div>
-            <img src="https://www.cfacdn.com/img/order/menu/Mobile/Beverages/Parent/DrPepper_PaperCup_straight_wet_1200x1200.png"
-                alt="" />
-            <h2>Dr Pepper®</h2>
-            <p>180 Cal per Container</p>
-            <button>Order now</button>
-        </div>
-        <div>
-            <img src="https://www.cfacdn.com/img/order/COM/Menu_Refresh/Drinks/Drinks%20PDP/_0000s_0026_%5BFeed%5D_0006s_0014_Drinks_Dasani-Water.png"
-                alt="" />
-            <h2>DASANI® Bottled Water</h2>
-            <p>0 Cal per Bottle</p>
-            <button>Order now</button>
-        </div>
-
-        <div>
-            <img src="https://www.cfacdn.com/img/order/menu/Online/Sides%26treats/PDP_CCCookie.png" alt="" />
-            <h2>Chocolate Chunk Cookie</h2>
-            <p>370 Cal per cookie</p>
-            <button>Order now</button>
-        </div>
-
-        <div>
-            <img src="https://www.cfacdn.com/img/order/menu/Mobile/Desserts/Menu%20Item/16oz_C%26C_Milkshake-1080.png"
-                alt="" />
-            <h2>Chocolate Milkshake</h2>
-            <p>590 Cal per Milkshake</p>
-            <button>Order now</button>
-        </div>
-        <div>
-            <img src="https://www.cfacdn.com/img/order/menu/Online/Sides%26treats/IceDream_RedCup_1080x1080.png"
-                alt="" />
-            <h2>Chick-fil-A® Icedream® Cup</h2>
-            <p>140 Cal per cup</p>
-            <button>Order now</button>
-        </div>
-
-        <div>
-            <img src="https://www.cfacdn.com/img/order/menu/Mobile/Desserts/Menu%20Item/16oz_StrawberryMilkshake-1080.png"
-                alt="" />
-            <h2>Strawberry Milkshake</h2>
-            <p>570 Cal per milkshake</p>
-            <button>Order now</button>
-        </div>
-
-        <div>
-            <img src="https://www.cfacdn.com/img/order/COM/Menu_Refresh/Treats/Treats%20Desktop/_0001s_0004_%5BFeed%5D_0005s_0000_Treats_Frosted-Coffee.png"
-                alt="" />
-            <h2>Frosted Coffee</h2>
-            <p>250 Cal per Serving</p>
-            <button>Order now</button>
-        </div>
-
-        <div>
-            <img src="https://www.cfacdn.com/img/order/menu/Online/PackagedMeals/Jul19_CFASandwich_PackagedMeal_Cookie_Chips_pdp.png"
-                alt="" />
-            <h2>Chick-fil-A® Chicken Sandwich Packaged Meal</h2>
-            <p>1030 Cal per meal</p>
-            <button>Order now</button>
-        </div>
-
-        <div>
-            <img src="https://www.cfacdn.com/img/order/menu/Online/PackagedMeals/CoolWrapPackagedMeal_1080x1080.png"
-                alt="" />
-            <h2>Chick-fil-A® Cool Wrap Packaged Meal</h2>
-            <p>940 Cal per meal</p>
-            <button>Order now</button>
-        </div>
-        <div>
-            <img src="https://www.cfacdn.com/img/order/menu/Online/PackagedMeals/Jul19_SpicySandwich_PackagedMeal_Cookie_Chips_pdp.png"
-                alt="" />
-            <h2>Spicy Chicken Sandwich Packaged Meal</h2>
-            <p>1050 Cal per meal</p>
-            <button>Order now</button>
-        </div>
-    </div>
+    <div id="display"></div>
 </body>
-<!-- <script>
-    function display(data) {
+<script>
+    let menu = [
+        {
+            category: "breakfast",
+            img: "https://www.cfacdn.com/img/order/COM/Menu_Refresh/Sides/Sides%20PDP/_0000s_0010_%5BFeed%5D_0003s_0002_Sides_Fruit-Cup.png",
+            name: "Fruit Cup",
+            details: "60 Cal per Serving",
+        },
+        {
+            category: "breakfast",
+            img: "https://www.cfacdn.com/img/order/menu/Online/Sides%26treats/Jul19_OrganicAussieGreekYogurtParfaitCupGranola_pdp.png",
+            name: "Greek Yogurt Parfai",
+            details: "270 Cal per serving",
+        },
+        {
+            category: "breakfast",
+            img: "https://www.cfacdn.com/img/order/menu/Online/Breakfast/EMuffin_PDP.png",
+            name: "English Muffin",
+            details: "140 Cal per muffin",
+        },
+        {
+            category: "sandwich",
+            img: "https://www.cfacdn.com/img/order/menu/Online/Breakfast/CECMuffin_1080px.png",
+            name: "Chicken, Egg & Cheese Muffin",
+            details: "420 Cal per Sandwich",
+        },
+        {
+            category: "sandwich",
 
+            img: "https://www.cfacdn.com/img/order/menu/Online/Entrees/Jul19_CFASandwich_pdp.png",
+            name: "Chick-fil-A® Chicken Sandwich",
+            details: "440 Cal per Sandwich",
+        },
+        {
+            category: "sandwich",
+            img: "https://www.cfacdn.com/img/order/COM/Menu_Refresh/Entree/Entree%20PDP/_0000s_0004_NEWStack6200001CFAPDPDeluxeSandwich1085png.png",
+            name: "Chick-fil-A® Deluxe Sandwich",
+            details: "500 Cal per Sandwich",
+        },
+        {
+            category: "sandwich",
+            img: "https://www.cfacdn.com/img/order/menu/Online/Entrees/spicyChilledGrilled_PDP.png",
+            name: "Spicy Chilled Grilled Chicken Sub Sandwich",
+            details: "430 Cal per sandwich",
+        },
+        {
+            category: "sandwich",
+            img: "https://www.cfacdn.com/img/order/menu/Online/Entrees/CFASpicySandwich_1080.png",
+            name: "Spicy Chicken Sandwich",
+            details: "460 Cal per Sandwich",
+        },
+        {
+            category: "kid",
+            img: "https://www.cfacdn.com/img/order/menu/Online/Entrees/Dec2019_CFANuggets_5ct_pdp.png",
+            name: "5 Ct Nuggets Kid's Meal",
+            details: "160 Cal per Entree",
+        },
+        {
+            category: "kid",
+            img: "https://www.cfacdn.com/img/order/menu/Online/Entrees/strips_2ct_PDP.png",
+            name: "2 Ct Chick-n-Strips® Kid's Meal",
+            details: "200 Cal per entrée",
+        },
+        {
+            category: "kid",
+            img: "https://www.cfacdn.com/img/order/menu/Online/Entrees/Dec2019_GrilledNuggets_5ct_pdp.png",
+            name: "5 Ct Grilled Nuggets Kid's Meal",
+            details: "80 Cal per Entree",
+        },
+        {
+            category: "drink",
+            img: "https://www.cfacdn.com/img/order/COM/Menu_Refresh/Drinks/Drinks%20PDP/_0000s_0022_Feed_Menu_0000_Drinks_Coca-cola.png",
+            name: "Coca-Cola®",
+            details: "140 Cal per Container",
+        },
+        {
+            category: "drink",
+            img: "https://www.cfacdn.com/img/order/menu/Mobile/Beverages/Parent/DrPepper_PaperCup_straight_wet_1200x1200.png",
+            name: "Dr Pepper®",
+            details: "180 Cal per Container",
+        },
+        {
+            category: "drink",
+            img: "https://www.cfacdn.com/img/order/COM/Menu_Refresh/Drinks/Drinks%20PDP/_0000s_0026_%5BFeed%5D_0006s_0014_Drinks_Dasani-Water.png",
+            name: "DASANI® Bottled Water",
+            details: "0 Cal per Bottle",
+        },
+
+        {
+            category: "treat",
+            img: "https://www.cfacdn.com/img/order/menu/Online/Sides%26treats/PDP_CCCookie.png",
+            name: "Chocolate Chunk Cookie",
+            details: "370 Cal per cookie",
+        },
+        {
+            category: "treat",
+            img: "https://www.cfacdn.com/img/order/menu/Mobile/Desserts/Menu%20Item/16oz_C%26C_Milkshake-1080.png",
+            name: "Chocolate Milkshake",
+            details: "590 Cal per Milkshake",
+        },
+        {
+            category: "treat",
+            img: "https://www.cfacdn.com/img/order/menu/Online/Sides%26treats/IceDream_RedCup_1080x1080.png",
+            name: "Chick-fil-A® Icedream® Cup",
+            details: "140 Cal per cup",
+        },
+        {
+            category: "treat",
+            img: "https://www.cfacdn.com/img/order/menu/Mobile/Desserts/Menu%20Item/16oz_StrawberryMilkshake-1080.png",
+            name: "Strawberry Milkshake",
+            details: "570 Cal per milkshake",
+        },
+        {
+            category: "treat",
+            img: "https://www.cfacdn.com/img/order/COM/Menu_Refresh/Treats/Treats%20Desktop/_0001s_0004_%5BFeed%5D_0005s_0000_Treats_Frosted-Coffee.png",
+            name: "Frosted Coffee",
+            details: "250 Cal per Serving",
+        },
+
+        {
+            category: "meal",
+            img: "https://www.cfacdn.com/img/order/menu/Online/PackagedMeals/Jul19_CFASandwich_PackagedMeal_Cookie_Chips_pdp.png",
+            name: "Chick-fil-A® Chicken Sandwich Packaged Meal",
+            details: "1030 Cal per meal",
+        },
+        {
+            category: "meal",
+            img: "https://www.cfacdn.com/img/order/menu/Online/PackagedMeals/CoolWrapPackagedMeal_1080x1080.png",
+            name: "Chick-fil-A® Cool Wrap Packaged Meal",
+            details: "940 Cal per meal",
+        },
+        {
+            category: "meal",
+            img: "https://www.cfacdn.com/img/order/menu/Online/PackagedMeals/Jul19_SpicySandwich_PackagedMeal_Cookie_Chips_pdp.png",
+            name: "Spicy Chicken Sandwich Packaged Meal",
+            details: "1050 Cal per meal",
+        },
+    ];
+
+    let display = document.querySelector("#display");
+    showData(menu);
+    let filter = document.querySelector("#filter");
+    filter.addEventListener("change", () => {
+        let filterData = menu.filter((a) => {
+            if (filter.value === a.category) {
+                return true;
+            }
+        });
+        if (filter.value == "") {
+            showData(menu);
+        } else {
+            showData(filterData);
+        }
+    });
+
+    let LS = JSON.parse(localStorage.getItem("order-list")) || [];
+
+    function showData(data) {
+        display.innerHTML = "";
+        for (let i = 0; i < data.length; i++) {
+            let div = document.createElement("div");
+            let img = document.createElement("img");
+            img.setAttribute("src", data[i].img);
+            let name = document.createElement("h2");
+            name.innerText = data[i].name;
+            let details = document.createElement("p");
+            details.innerText = data[i].details;
+            let button = document.createElement("button");
+
+            button.innerText = "Order now";
+            display.append(div);
+            button.addEventListener("click", () => {
+                if (LS.includes(data[i])) {
+                    alert("Order already placed");
+                } else {
+                    LS.push(data[i]);
+                    localStorage.setItem("order-list", JSON.stringify(LS));
+                    alert("Order placed");
+                }
+            });
+            div.append(img, name, details, button);
+        }
     }
-</script> -->
+</script>
 
 </html>
