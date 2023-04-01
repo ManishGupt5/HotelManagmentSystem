@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon"
+        href="https://d2wl1kt18tqdum.cloudfront.net/v2.1.2549-stageb/Assets/Theming/css/img/icon_circle-cfa-logo.svg"
+        type="image/x-icon" />
+    <title>crazy-science-2420</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+                Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+                sans-serif;
+        }
+
+        /* <--Header css start --> */
+        #header {
+            margin: 0px;
+            position: fixed;
+            top: 0px;
+            width: 100%;
+            box-shadow: 1px 1px 2px 0px grey;
+            background-color: #fff;
+        }
+
+        #navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-direction: row;
+            width: 96%;
+            margin: auto;
+            font-size: 17px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo a {
+            display: flex;
+            gap: 10px;
+            justify-content: space-between;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .menu {
+            display: flex;
+            width: 30%;
+            margin: auto;
+            justify-content: space-evenly;
+            gap: 15px;
+        }
+
+        #navbar a {
+            display: inline-flex;
+            margin: 5px;
+            text-decoration: none;
+            color: #e3204a;
+        }
+
+        #navbar button {
+            font-size: 17px;
+            border-radius: 24px;
+            padding: 11px;
+            border: none;
+            width: 150px;
+            background-color: #e3204a;
+            color: white;
+        }
+
+        /* <--Header css end --> */
+        #container {
+            display: flex;
+            width: 90%;
+            margin: auto;
+        }
+
+        #conatainer>div {
+            height: 50px;
+            background-color: red;
+        }
+
+        .heading {
+            margin-top: 85px;
+            text-align: center;
+        }
+
+        #display {
+            display: grid;
+            width: 90%;
+            margin: auto;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            align-items: center;
+            padding: 30px;
+            text-align: center;
+        }
+
+        #display img {
+            width: 100%;
+        }
+
+        #filter {
+            padding: 6px;
+            border-radius: 3px;
+        }
+
+        button:hover {
+            opacity: 0.7;
+        }
+
+        @media only screen and (max-width: 700px) {
+            #navbar {
+                flex-direction: column;
+                width: 100%;
+                justify-content: center;
+                margin-bottom: 10px;
+            }
+
+            #navbar button {
+                display: none;
+            }
+
+            .heading {
+                margin-top: 156px;
+            }
+
+            #display {
+                display: grid;
+                width: 90%;
+                margin: auto;
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <div id="navbar">
+            <div class="logo">
+                <a href="./index.html"><img
+                        src="https://d2wl1kt18tqdum.cloudfront.net/v2.1.2549-stageb/Assets/Theming/css/img/icon_circle-cfa-logo.svg"
+                        alt="log" />
+                </a>
+                <a href="">
+                    <img src="https://www.chick-fil-a.com/-/media/images/cfa/feature/page-content/defaultimages/pwo/pwo-modals/use-my-location-icon.ashx?la=en&hash=2441EF1B39331BBB17269D2B7EA274FB"
+                        alt="location" />
+                    <p>Find a restaurant</p>
+                </a>
+            </div>
+            <div class="menu">
+                <a href="menu.html">Menu</a>
+                <a href="./myOrder.html">Order</a>
+                <a href="">About</a>
+                <a href="./login.html">Login</a>
+            </div>
+            <div>
+                <button>Order now</button>
+            </div>
+        </div>
+    </div>
+    <div class="heading">
+        <h1>Chick-fil-A® Order List</h1>
+        <strong>Filter order</strong>
+
+        <select id="filter">
+            <option value="">Filter From Order List</option>
+            <option value="breakfast">Breakfast</option>
+
+            <option value="sandwich">Sandwich</option>
+            <option value="drink">Drinks</option>
+            <option value="kid">Kid Meal</option>
+
+            <option value="treat">Treats</option>
+
+            <option value="meal">Packed meal</option>
+        </select>
+    </div>
+
+    <div id="display"></div>
+</body>
+<script>
+    let LS = JSON.parse(localStorage.getItem("order-list"));
+
+    let display = document.querySelector("#display");
+
+    showData(LS);
+
+    let filter = document.querySelector("#filter");
+    filter.addEventListener("change", () => {
+        let filterData = LS.filter((a) => {
+            if (filter.value === a.category) {
+                return true;
+            }
+        });
+        console.log(filterData);
+        if (filter.value === "") {
+            showData(LS);
+        } else {
+            showData(filterData);
+        }
+    });
+
+    function showData(data) {
+        display.innerHTML = "";
+        for (let i = 0; i < data.length; i++) {
+            let div = document.createElement("div");
+            let img = document.createElement("img");
+            img.setAttribute("src", data[i].img);
+            let name = document.createElement("h2");
+            name.innerText = data[i].name;
+            let details = document.createElement("p");
+            details.innerText = data[i].details;
+
+            display.append(div);
+            div.append(img, name, details);
+        }
+    }
+</script>
+
+</html>
